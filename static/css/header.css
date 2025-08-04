@@ -117,7 +117,7 @@
     background-color: var(--r3-black);
 }
 
-#tools-dropdown:hover {
+.tools-wrapper:hover {
     .tools-dropdown-container {
         width: 100%;
         display: block;
@@ -164,5 +164,17 @@
     .nav-container {
         display: flex;
         flex-direction: column;
+    }
+}
+
+#tools-toggle:checked {
+    .tools-dropdown-container {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 631px) {
+    .tools-wrapper:hover .tools-dropdown-container {
+        display: block;
     }
 }
