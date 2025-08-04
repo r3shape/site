@@ -1,0 +1,66 @@
+/* NGIN HERO */
+.ngin-hero-container {
+    height: 50vh;
+    
+    display: flex;
+    flex-direction: column;
+    
+    align-items: start;
+    justify-content: center;
+    
+    border: 2px solid var(--r3-white);
+    background: linear-gradient(45deg, var(--r3-blue), black, black, black);
+} .ngin-hero-title {
+    font-size: 90px;
+    color: transparent;
+    
+    animation: shine linear 5s infinite reverse;
+    background: linear-gradient(90deg, rgb(10, 10, 10), rgb(30, 30, 30), grey, white, grey, rgb(30, 30, 30), rgb(10, 10, 10)) -100%/200% repeat;
+    background-clip: text;
+} .ngin-hero-quote {
+    padding: 8px;
+    color: var(--r3-white);
+} .ngin-hero-links {
+    gap: 8px;
+    display: flex;
+    flex-direction: row;
+
+    padding: 8px;
+} .ngin-hero-link {
+    color: var(--r3-black);
+} .ngin-hero-link:hover {
+    color: var(--r3-white);
+    cursor: pointer;
+} .ngin-hero-features {
+    display: flex;
+    flex-direction: row;
+    
+    height: 25%;
+    transform: translateY(50%);
+    justify-content: space-evenly;
+} .ngin-hero-feature {
+    margin: 8px;
+    padding: 8px;
+
+    border-radius: 10px;
+} .ngin-hero-feature-title {
+    color: var(--r3-white);
+} .ngin-hero-feature-text {
+    color: var(--r3-white);
+}
+
+@keyframes shine { to { background-position: 100%; } }
+
+@media screen and (max-width: 630px) {
+    .ngin-hero-container {
+        height: fit-content;
+        padding: 8px 0px;
+    } .ngin-hero-title {
+        font-size:  50px;
+    } .ngin-hero-links {
+        padding: 8px 8px;
+    } .ngin-hero-features {
+        flex-direction: column;
+        transform: translateY(0%);
+    }
+}
